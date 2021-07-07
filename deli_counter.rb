@@ -1,1 +1,41 @@
-# Write your code here.
+other_deli = ["Logan", "Avi", "Spencer"]
+
+def line (katz_deli)
+  if katz_deli.count > 1
+    output = "The line is currently:"
+    katz_deli.each_with_index do |name, index|
+      output << " #{index +1}. #{name}"
+    end
+    puts output
+  else
+    puts "The line is currently empty."
+  end
+end
+
+line(other_deli)
+
+def take_a_number(katz_deli, name)
+	katz_deli.push(name)
+	puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+#
+end
+
+#now serving
+#def now_serving(katz_deli)
+  #if katz_deli == 0
+  #  puts "There is nobody waiting to be served!"
+ # else 
+#	 puts "Currently serving " + katz_deli[0] +"."
+ # end
+ # katz_deli.shift
+#end
+
+def now_serving(katz_deli)
+  if katz_deli.empty?
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{katz_deli[0]}."
+    katz_deli.shift
+    # shift to removes the first element of the nextinline array and returns it (shifting all other elements down by one). Returns nil if the array is empty.
+  end
+end
